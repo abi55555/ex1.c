@@ -1,7 +1,7 @@
 /******************
-Name:
-ID:
-Assignment:
+Name: Abigail tzabar
+ID: 333165959
+Assignment: ex1
 *******************/
 #include <stdio.h>
 
@@ -10,40 +10,85 @@ Assignment:
 int main()
 {
 
-    // Ascii
+    // task 1: Ascii
     printf("Ascii:\n");
-    /*. Scan one character from the user.
-        Then, refer to it as an integer.
-        a. Print its value.
-        b:
-        Print “0”, if its integer representation is even.
-        print “1” if its integer representation is odd. */
+    char c;                            //declaring our 
+    int lsb;
 
-    // 2's complement and other representations
+    printf("Ascii:\n");
+    printf("Please enter a character\n");
+    scanf("%s", &c);
+    printf("Its numerical value is: %d\n", c);
+    lsb = c & 1;
+    printf("0 for even, 1 for odd: %d\n", lsb);
+
+
+    //task 2: 2's complement and other representations
     printf("\n2's Complement to Other Representations:\n");
-    /*. Scan a negative integer. [2’s complement].
-        Print its value in 1’s complement.
-        Print its value as unsigned. */
+    int a;
+    int b;
+    printf("2's complement to other representations:\n");
+    printf("Please enter a negetive integer: ");
+    scanf("%d", &a);
+    b = -(~a);
+    printf("1's complement: %d\n", b);
+    printf("Unsigned: %u ", a);
 
-    // Shifting right and left
+
+    //task 3: Shifting right and left
     printf("\nShifting Right and Left:\n");
-    /*. Scan 3 integers.
-        The first one - the value you will play with.
-        The second and the third - how much to shift right and left, respectively.
-        Print the value after shifting right and then shifting left. */
+    int x;
+    int y;
+    int z;
+    printf("Shifting right and left:\n");
+    printf("Please enter 3 integers:\n");
+    scanf("%d", &x);
+    scanf("%d", &y);
+    scanf("%d", &z);
+    x = x >> y;
+    x = x << z;
+    printf("After shifting right and left: %d", x);
 
-    // Even - Odd
+    //task 4: Even - Odd
     printf("\nEven - Odd:\n");
-    /* Scan 3 Integers.
-    If at least two of them are even - print 0.
-    If at least two of them are odd - print 1. */
+    int u;
+    int v;
+    int w;
+    int result;
 
-    // Different Bases
+    printf("Even - Odd\n");
+    printf("Please enter 3 integers: ");
+    scanf("%d", &u);
+    scanf("%d", &v);
+    scanf("%d", &w);
+    //result = (x & 1) + (y & 1) + (z & 1);
+    result = (u & 1) | (v & 1) | (w & 1);
+    printf("0 - most of them are even, 1 - most of them are odd: %d", result >> 1);
+
+    //task 5: Different Bases
     printf("\nDifferent Bases:\n");
-    /*  Scan two numbers:
-        One in octal base, one in Hexadecimal base.
-        Print their LSB’s.
-        Print their MSB’s. */
+    
+    int num1;
+    int num2;
+    int lsb1;
+    int lsb2;
+    int msb1;
+    int msb2;
+
+    printf("Different Bases:\n");
+    printf("Please enter two numbers in octal and hexadecimal bases\n");
+    scanf("%d", &num1);
+    scanf("%d", &num2);
+
+    lsb1 = num1 & 1;
+    lsb2 = num2 & 1;
+    msb1 = num1 & 0;
+    msb2 = num2 & 0;
+
+
+    printf("LSB: %d %d\n", lsb1, lsb2);
+    printf("MSB: %d %d", msb1, msb2);
+    
 
     printf("Bye!\n");
 
