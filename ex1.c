@@ -12,14 +12,15 @@ int main()
 
     // task 1: Ascii
     printf("Ascii:\n");
-    char c;                            //declaring our 
+    char c;                                      //declaring our variables
     int lsb;
 
     printf("Ascii:\n");
     printf("Please enter a character\n");
-    scanf("%s", &c);
-    printf("Its numerical value is: %d\n", c);
-    lsb = c & 1;
+    scanf("%s", &c);                             //accepting user input
+    printf("Its numerical value is: %d\n", c);   //using %d to pint the c as a integer and not as a character
+    lsb = c & 1;                                 //a number in its binary represntation is even if its lsb is 0 and odd if its 1.
+                                                 //so we use AND because (0 & 1 = 0)
     printf("0 for even, 1 for odd: %d\n", lsb);
 
 
