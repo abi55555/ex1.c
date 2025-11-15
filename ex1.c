@@ -5,22 +5,20 @@ Assignment: ex1
 *******************/
 #include <stdio.h>
 
-// REMIDER : YOU CANT USE ANY CONTROL FLOW OPERATIONS OR FUNCTIONS, ONLY BITWISE. not even "==, &&, ||, !="
+
 
 int main()
 {
 
     // task 1: Ascii
     printf("Ascii:\n");
-    char c;                                      //declaring our variables
+    char c;                        
     int lsb;
-
-    printf("Ascii:\n");
     printf("Please enter a character\n");
-    scanf("%s", &c);                             //accepting user input
-    printf("Its numerical value is: %d\n", c);   //using %d to pint the c as a integer and not as a character
-    lsb = c & 1;                                 //a number in its binary represntation is even if its lsb is 0 and odd if its 1.
-                                                 //so we use AND because (0 & 1 = 0)
+    scanf("%s", &c);                          
+    printf("Its numerical value is: %d\n", c);   
+    lsb = c & 1;                          
+                                                 
     printf("0 for even, 1 for odd: %d\n", lsb);
 
 
@@ -28,7 +26,7 @@ int main()
     printf("\n2's Complement to Other Representations:\n");
     int a;
     int b;
-    printf("2's complement to other representations:\n");
+ 
     printf("Please enter a negetive integer: ");
     scanf("%d", &a);
     b = -(~a);
@@ -41,7 +39,6 @@ int main()
     int x;
     int y;
     int z;
-    printf("Shifting right and left:\n");
     printf("Please enter 3 integers:\n");
     scanf("%d", &x);
     scanf("%d", &y);
@@ -57,7 +54,6 @@ int main()
     int w;
     int result;
 
-    printf("Even - Odd\n");
     printf("Please enter 3 integers: ");
     scanf("%d", &u);
     scanf("%d", &v);
@@ -75,8 +71,6 @@ int main()
     int lsb2;
     int msb1;
     int msb2;
-
-    printf("Different Bases:\n");
     printf("Please enter two numbers in octal and hexadecimal bases\n");
     scanf("%d", &num1);
     scanf("%d", &num2);
